@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeevaKanna.E | Business Analyst & Data Science Professional</title>
+    <meta name="description"
+        content="Portfolio of JeevaKanna.E, a Business Analyst and Data Science Professional. Decisions driven by data, results powered by AI.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Canvas for Neural Network / Data Flow -->
+    <canvas id="bg-canvas"></canvas>
+
+
+
+    <!-- Immersive Neural Navigation Overlays -->
+    <div id="neural-nav-container">
+        <div class="neural-nav-node position-right" data-target="hero">
+            <span class="label">Home</span>
+        </div>
+        <div class="neural-nav-node position-left" data-target="about">
+            <span class="label">About</span>
+        </div>
+        <div class="neural-nav-node position-right" data-target="skills">
+            <span class="label">Skills</span>
+        </div>
+        <div class="neural-nav-node position-left" data-target="experience">
+            <span class="label">Experience</span>
+        </div>
+        <div class="neural-nav-node position-right" data-target="contact">
+            <span class="label">Contact</span>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">JK<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero">
+            <div class="section-scroll-inner">
+                <div class="hero-layout-wrapper reveal-element">
+                    <!-- Left Column: Large Showcase Photo -->
+                    <div class="hero-showcase-photo-container">
+                        <div class="hero-photo-glow-large"></div>
+                        <div class="hero-photo-frame-large">
+                            <img src="pro-photo.png" alt="JeevaKanna.E" class="hero-photo-large">
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Hero Content & CTAs -->
+                    <div class="hero-content">
+                        <h2 class="greeting">Hi, I'm</h2>
+                        <h1 class="name">JeevaKanna.E</h1>
+                        <h3 class="role">Business Analyst</h3>
+                        <div class="typewriter-container">
+                            <span id="typewriter" class="typewriter"></span><span class="cursor">_</span>
+                        </div>
+                        <div class="cta-group">
+                            <a href="#experience" class="btn btn-primary">View Experience</a>
+                            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                        </div>
+                        <div class="resume-cta-row">
+                            <button id="open-resume-btn" class="btn-resume-hero" aria-label="View and Download Resume">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                </svg>
+                                Resume
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Modal Viewer -->
+        <div class="resume-modal-overlay" id="resumeModalOverlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+            <div class="resume-modal">
+                <div class="resume-modal-header">
+                    <div class="resume-modal-header-left">
+                        <div class="resume-modal-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="resume-modal-title" id="resumeModalTitle">JeevaKanna.E — Resume</h3>
+                            <p class="resume-modal-subtitle">Business Analyst &amp; Data Science Professional</p>
+                        </div>
+                    </div>
+                    <div class="resume-modal-actions">
+                        <a href="BAJeevakanna-Resume.pdf" download="JeevaKanna_Resume.pdf" class="resume-action-btn download-btn" title="Download PDF">
+                            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download
+                        </a>
+                        <a href="BAJeevakanna-Resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-action-btn external-btn" title="Open in new tab">
+                            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                        <button class="resume-modal-close" id="closeResumeModal" aria-label="Close modal">&times;</button>
+                    </div>
+                </div>
+                <div class="resume-modal-body">
+                    <iframe id="resumeIframe" src="" data-src="BAJeevakanna-Resume.pdf#toolbar=1&navpanes=0" class="resume-iframe" title="Resume PDF Preview"></iframe>
+                </div>
+                <div class="resume-modal-footer">
+                    <span class="resume-filename">BAJeevakanna-Resume.pdf</span>
+                    <div class="resume-footer-btns">
+                        <a href="BAJeevakanna-Resume.pdf" download="JeevaKanna_Resume.pdf" class="btn btn-primary btn-sm">Download Resume</a>
+                        <button type="button" class="btn btn-secondary btn-sm" id="resumeFooterClose">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. About Section -->
+        <section id="about" class="about">
+            <div class="section-scroll-inner">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="about-wrapper glass-panel reveal-element">
+                    <div class="about-meta-strip">
+                        <div class="meta-item">
+                            <span class="meta-label">Role</span>
+                            <span class="meta-value">Business Analyst</span>
+                        </div>
+                        <div class="meta-divider"></div>
+                        <div class="meta-item">
+                            <span class="meta-label">Education</span>
+                            <span class="meta-value">B.Com</span>
+                        </div>
+                        <div class="meta-divider"></div>
+                        <div class="meta-item">
+                            <span class="meta-label">Specialization</span>
+                            <span class="meta-value">Data Science with AI</span>
+                        </div>
+                        <div class="meta-divider"></div>
+                        <div class="meta-item">
+                            <span class="meta-label">Next Goal</span>
+                            <span class="meta-value meta-accent">M.A Financial Economics</span>
+                        </div>
+                    </div>
+
+                    <div class="about-narrative-clean">
+                        <p>I’m a <span class="highlight-text">FinTech Business Analyst</span> with a <span class="highlight-text">commerce graduation and Data Science certifications</span>, passionate about technology, financial markets, and solving business problems and concluding product solutions through data-driven approaches.</p>
+                        <p>I have a strong interest in <span class="highlight-text">Data Analytics, Artificial Intelligence, Machine Learning, Product Management, and Project Management</span>. My technical toolkit includes <span class="highlight-text">Python, SQL, Excel, Power BI, and data visualization</span>, along with a growing understanding of AI concepts.</p>
+                        <p>I’m particularly interested in <span class="highlight-text">project and product management</span>, where I enjoy understanding requirements, coordinating with different stakeholders, organizing priorities, tracking progress, and ensuring that ideas are translated into practical solutions. I believe effective project management is about bringing together <span class="highlight-text">people, processes, technology, and business objectives</span> to deliver meaningful outcomes.</p>
+                        <p>I enjoy learning how technology can transform business processes, improve decision-making, and create better user experiences. I’m especially interested in the intersection of <span class="highlight-text">Finance, Technology, Data, AI, and Management</span>.</p>
+                        <p>My long-term goal is to grow into an <span class="highlight-text">AI Product Manager</span>, combining my business knowledge, analytical thinking, technical skills, and management capabilities to build and deliver impactful products.</p>
+                        <p><strong class="highlight-text">Curious by nature. Analytical by mindset. Driven by execution. Focused on building what matters.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Skills Section -->
+        <section id="skills" class="skills">
+            <div class="section-scroll-inner">
+                <div class="section-header">
+                    <h2>Technical Proficiency</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="skills-logo-grid reveal-element">
+                    <!-- Excel — purple glow -->
+                    <div class="skill-logo-item" data-skill="excel" data-glow="purple">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="6" fill="#1D6F42" />
+                                <path d="M14 14l8 10-8 10h4.5l5.5-7 5.5 7H34l-8-10 8-10h-4.5L24 21l-5.5-7H14z"
+                                    fill="#fff" />
+                            </svg>
+                        </div>
+                        <span class="skill-label">Excel</span>
+                    </div>
+                    <!-- MySQL — cyan glow -->
+                    <div class="skill-logo-item" data-skill="mysql" data-glow="cyan">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 56 56" width="56" height="56">
+                                <rect x="0" y="0" width="56" height="56" rx="8" fill="#0d1117" />
+                                <g transform="translate(16, 6) scale(0.52)">
+                                    <path
+                                        d="M43.5 2.2c-2.1-.5-3.6-.2-4.9.5-.4.2-.7.5-1 .7-.5-.2-1-.3-1.6-.4-2.2-.4-4.1.2-5.5 1.2-.5.3-.9.7-1.2 1.1-1.1-.1-2.3.1-3.2.6-1.6.8-2.6 2.2-3 3.5-.2.5-.2 1-.2 1.4-.8.3-1.5.8-2 1.4-1.2 1.4-1.5 3.2-1.2 4.8.1.5.3 1 .5 1.5-.5.6-.9 1.3-1 2-.5 2 .1 3.9 1.2 5.2.4.5.9.9 1.5 1.2 0 .8.2 1.6.5 2.3.9 1.8 2.6 3 4.4 3.4.6.2 1.2.2 1.8.1.4.6 1 1.2 1.6 1.5 1.7 1 3.5 1 5 .4.5-.2 1-.5 1.4-.9.7.2 1.4.2 2.1 0 1.8-.5 3.2-1.8 3.8-3.4.2-.5.3-1.1.3-1.7.7-.2 1.3-.6 1.8-1 1.4-1.2 2-3 1.8-4.7 0-.5-.2-1.1-.4-1.6.5-.5.8-1.2 1-1.9.5-2 0-3.9-1.1-5.3-.4-.5-.9-.9-1.4-1.3.1-.8 0-1.6-.3-2.4-.8-1.9-2.4-3.2-4.2-3.6z"
+                                        fill="#00678C" />
+                                </g>
+                                <text x="13" y="46" fill="#00546B" font-size="12" font-weight="700"
+                                    font-family="Inter,sans-serif" letter-spacing="0.3">My</text>
+                                <text x="30" y="46" fill="#E48E00" font-size="12" font-weight="700"
+                                    font-family="Inter,sans-serif" letter-spacing="0.3">SQL</text>
+                            </svg>
+                        </div>
+                        <span class="skill-label">MySQL</span>
+                    </div>
+                    <!-- Power BI — cyan glow -->
+                    <div class="skill-logo-item" data-skill="powerbi" data-glow="cyan">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="6" fill="#F2C811" />
+                                <rect x="13" y="28" width="5" height="8" rx="1" fill="#333" />
+                                <rect x="21" y="22" width="5" height="14" rx="1" fill="#333" />
+                                <rect x="29" y="14" width="5" height="22" rx="1" fill="#333" />
+                            </svg>
+                        </div>
+                        <span class="skill-label">Power BI</span>
+                    </div>
+                    <!-- Statistics — blue glow -->
+                    <div class="skill-logo-item" data-skill="statistics" data-glow="blue">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="6" fill="#2C2C3E" />
+                                <polyline points="10,36 17,24 24,30 31,16 38,20" fill="none" stroke="#8B9DC3"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="17" cy="24" r="2.5" fill="#8B9DC3" opacity="0.8" />
+                                <circle cx="24" cy="30" r="2.5" fill="#8B9DC3" opacity="0.8" />
+                                <circle cx="31" cy="16" r="2.5" fill="#A0B4D0" />
+                                <line x1="10" y1="38" x2="38" y2="38" stroke="rgba(255,255,255,0.08)"
+                                    stroke-width="1" />
+                            </svg>
+                        </div>
+                        <span class="skill-label">Statistics</span>
+                    </div>
+                    <!-- Python — cyan glow -->
+                    <div class="skill-logo-item" data-skill="python" data-glow="cyan">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="6" fill="#1A1A2E" />
+                                <path
+                                    d="M23.5 8C18 8 16 10.5 16 14v3h8v1H13.5c-3 0-5.5 2-5.5 6s2 6.5 5 6.5h3v-4c0-2.8 2.2-5 5-5h8c2.5 0 4.5-2 4.5-4.5V14c0-3-2.5-6-10-6zm-5 3.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"
+                                    fill="#306998" />
+                                <path
+                                    d="M24.5 40c5.5 0 7.5-2.5 7.5-6v-3h-8v-1h10.5c3 0 5.5-2 5.5-6s-2-6.5-5-6.5h-3v4c0 2.8-2.2 5-5 5h-8c-2.5 0-4.5 2-4.5 4.5V34c0 3 2.5 6 10 6zm5-3.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"
+                                    fill="#FFD43B" />
+                            </svg>
+                        </div>
+                        <span class="skill-label">Python</span>
+                    </div>
+                    <!-- Machine Learning — purple glow -->
+                    <div class="skill-logo-item" data-skill="ml" data-glow="purple">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="6" fill="#0f172a" />
+                                <circle cx="16" cy="18" r="3" fill="#e040fb" />
+                                <circle cx="16" cy="30" r="3" fill="#e040fb" />
+                                <circle cx="28" cy="14" r="3" fill="#7c4dff" />
+                                <circle cx="28" cy="24" r="3" fill="#7c4dff" />
+                                <circle cx="28" cy="34" r="3" fill="#7c4dff" />
+                                <circle cx="38" cy="24" r="3" fill="#00f0ff" />
+                                <line x1="16" y1="18" x2="28" y2="14" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                                <line x1="16" y1="18" x2="28" y2="24" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                                <line x1="16" y1="30" x2="28" y2="24" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                                <line x1="16" y1="30" x2="28" y2="34" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                                <line x1="28" y1="14" x2="38" y2="24" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                                <line x1="28" y1="24" x2="38" y2="24" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                                <line x1="28" y1="34" x2="38" y2="24" stroke="rgba(255,255,255,0.15)"
+                                    stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <span class="skill-label">Machine Learning</span>
+                    </div>
+                    <!-- Deep Learning — violet glow -->
+                    <div class="skill-logo-item" data-skill="deeplearning" data-glow="violet">
+                        <div class="skill-icon-wrap">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <rect x="4" y="4" width="40" height="40" rx="6" fill="#0f172a" />
+                                <g stroke="rgba(0, 240, 255, 0.2)" stroke-width="1">
+                                    <line x1="12" y1="16" x2="24" y2="12" />
+                                    <line x1="12" y1="16" x2="24" y2="24" />
+                                    <line x1="12" y1="32" x2="24" y2="24" />
+                                    <line x1="12" y1="32" x2="24" y2="36" />
+                                    <line x1="24" y1="12" x2="36" y2="20" />
+                                    <line x1="24" y1="24" x2="36" y2="20" />
+                                    <line x1="24" y1="24" x2="36" y2="28" />
+                                    <line x1="24" y1="36" x2="36" y2="28" />
+                                </g>
+                                <circle cx="12" cy="16" r="2.5" fill="#7c4dff" />
+                                <circle cx="12" cy="32" r="2.5" fill="#7c4dff" />
+                                <circle cx="24" cy="12" r="2" fill="#2979ff" />
+                                <circle cx="24" cy="24" r="2" fill="#2979ff" />
+                                <circle cx="24" cy="36" r="2" fill="#2979ff" />
+                                <circle cx="36" cy="20" r="2.5" fill="#00f0ff" />
+                                <circle cx="36" cy="28" r="2.5" fill="#00f0ff" />
+                            </svg>
+                        </div>
+                        <span class="skill-label">Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Certification Modal — Protected Viewer -->
+        <div class="cert-viewer-overlay" id="certViewer" oncontextmenu="return false;">
+            <div class="cert-viewer-modal" oncontextmenu="return false;" ondragstart="return false;">
+                <button class="cert-viewer-close" id="certViewerClose" aria-label="Close">&times;</button>
+
+                <!-- Header -->
+                <div class="cert-viewer-header">
+                    <div class="cert-viewer-icon" id="certViewerIcon"></div>
+                    <h3 class="cert-viewer-title" id="certViewerTitle"></h3>
+                    <p class="cert-viewer-subtitle" id="certViewerSubtitle"></p>
+                </div>
+
+                <!-- Certificate Canvas Container (for skills with certs) -->
+                <div class="cert-canvas-container" id="certCanvasContainer">
+                    <canvas id="certCanvas" class="cert-canvas"></canvas>
+                    <!-- Transparent shield to block all pointer interactions on canvas -->
+                    <div class="cert-shield"></div>
+                    <!-- Watermark overlay -->
+                    <div class="cert-watermark">
+                        <span>Preview Only</span>
+                        <span>JeevaKanna.E</span>
+                        <span>Preview Only</span>
+                    </div>
+                </div>
+
+                <!-- Ongoing status (for Deep Learning) -->
+                <div class="cert-ongoing-container" id="certOngoingContainer">
+                    <div class="cert-ongoing-visual">
+                        <svg viewBox="0 0 80 80" width="80" height="80">
+                            <circle cx="40" cy="40" r="34" fill="none" stroke="rgba(255,179,0,0.15)" stroke-width="3" />
+                            <circle cx="40" cy="40" r="34" fill="none" stroke="var(--accent-gold)" stroke-width="3"
+                                stroke-dasharray="80 134" stroke-linecap="round" class="cert-ongoing-spinner" />
+                        </svg>
+                        <span class="cert-ongoing-icon">⏳</span>
+                    </div>
+                    <p class="cert-ongoing-label">Certification In Progress</p>
+                    <p class="cert-ongoing-desc">Building expertise in neural network architectures, CNNs, RNNs, and
+                        advanced deep learning frameworks.</p>
+                </div>
+
+                <!-- Footer badge -->
+                <div class="cert-viewer-footer" id="certViewerFooter">
+                    <div class="cert-badge-row" id="certBadgeRow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Experience Section -->
+        <section id="experience" class="experience">
+            <div class="section-scroll-inner">
+                <div class="section-header">
+                    <h2>Work Experience</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="experience-timeline reveal-element">
+                    <!-- Experience Card -->
+                    <div class="experience-card glass-panel">
+                        <div class="experience-header">
+                            <div class="experience-company-wrapper">
+                                <img src="flattrade-logo.png" alt="Flattrade Logo" class="company-logo">
+                                <div>
+                                    <h3>Business Analyst</h3>
+                                    <div class="experience-company">Flattrade Broking Private Limited</div>
+                                </div>
+                            </div>
+                            <span class="experience-date">May 2026 - Present</span>
+                        </div>
+                        <ul class="experience-details">
+                            <li>Coordinating the end-to-end implementation of a <span class="highlight-text">CTCL platform migration project</span>, facilitating the replacement of the existing trading infrastructure with a new third-party CTCL solution.</li>
+                            <li>Gather and consolidate functional and technical requirements from business and engineering teams, ensuring accurate communication and successful execution of <span class="highlight-text">project objectives</span>.</li>
+                            <li>Lead daily project coordination alongside senior management, working with <span class="highlight-text">15–20 cross-functional stakeholders</span> across business, development, vendor, and operations teams to ensure timely project execution.</li>
+                            <li>Manage project timelines, deliverables, <span class="highlight-text">meeting minutes (MoMs)</span>, and status reporting to maintain alignment across all stakeholders.</li>
+                            <li>Coordinate the migration and integration approvals across <span class="highlight-text">NSE, BSE, and MCX</span>, supporting seamless implementation and exchange readiness ensuring compliance regulations are followed.</li>
+                            <li>Manage <span class="highlight-text">client onboarding</span> for API and algorithmic trading, guiding clients through UAT testing and product documentation, exchange approval processes, compliance requirements, and implementation readiness.</li>
+                            <li>Oversee post-trade operational activities by monitoring contract note delivery. Analyze exchange compliance alerts pertaining to <span class="highlight-text">sub-10 Orders Per Second (OPS)</span> regulations for algorithmic trading clients by reviewing order lifecycle data, investigating potential breaches, and submitting comprehensive compliance reports and clarifications to exchanges for regulatory closure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-scroll-inner">
+                <div class="section-header">
+                    <h2>Contacts</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="contact-grid reveal-element">
+                    <!-- Left Column -->
+                    <div class="contact-left">
+
+                        <!-- Availability -->
+                        <div class="availability-card glass-panel">
+                            <div class="availability-status">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for Opportunities</span>
+                            </div>
+                        </div>
+
+                        <!-- Contact Cards -->
+                        <div class="touchpoint-cards">
+                            <a href="mailto:jeevakanna1244@gmail.com" class="contact-card glass-panel"
+                                id="contact-email">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">Email</span>
+                                    <span class="card-value">jeevakanna1244@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <a href="tel:+919150439252" class="contact-card glass-panel" id="contact-phone">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 015.06 2h3a2 2 0 012 1.72 12.81 12.81 0 00.63 2.81 2 2 0 01-.45 2.11L8.99 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.63A2 2 0 0122 16.92z" />
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">Phone</span>
+                                    <span class="card-value">+91 9150439252</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/jeeva-kanna-da1244" target="_blank" rel="noopener noreferrer"
+                                class="contact-card glass-panel" id="contact-linkedin">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                        <rect x="2" y="9" width="4" height="12" />
+                                        <circle cx="4" cy="4" r="2" />
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">LinkedIn</span>
+                                    <span class="card-value">linkedin.com/in/jeeva-kanna-da1244</span>
+                                </div>
+                            </a>
+
+                            <a href="https://github.com/jeevakanna" target="_blank" rel="noopener"
+                                class="contact-card glass-panel" id="contact-github">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path
+                                             d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">GitHub</span>
+                                    <span class="card-value">github.com/jeevakanna</span>
+                                </div>
+                            </a>
+
+                            <div class="contact-card glass-panel location-card" id="contact-location">
+                                <div class="card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-label">Location</span>
+                                    <span class="card-value">Chennai, Tamil Nadu, India</span>
+                                </div>
+                                <!-- Decorative map pin SVG -->
+                                <svg class="location-map-bg" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="26" r="20" stroke="rgba(0,229,255,0.3)" stroke-width="1"
+                                        stroke-dasharray="4 3" />
+                                    <circle cx="30" cy="26" r="12" stroke="rgba(0,229,255,0.15)" stroke-width="0.8" />
+                                    <circle cx="30" cy="26" r="3" fill="rgba(0,229,255,0.4)" />
+                                    <line x1="30" y1="46" x2="30" y2="58" stroke="rgba(0,229,255,0.2)"
+                                        stroke-width="0.8" stroke-dasharray="2 2" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Terminal Widget -->
+                        <div class="terminal-widget">
+                            <div class="terminal-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="terminal-title">contact_agent.sh</span>
+                            </div>
+                            <div class="terminal-body">
+                                <p class="log-entry">> Initializing secure channel...</p>
+                                <p class="log-entry">> Endpoint: <span class="status-highlight">JeevaKanna.E</span></p>
+                                <p class="log-entry">> Location: Chennai, IN</p>
+                                <p class="log-entry">> Status: <span class="status-highlight">READY_FOR_COLLAB</span>
+                                </p>
+                                <p class="blink">_</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 JeevaKanna.E. Designed for impact.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
